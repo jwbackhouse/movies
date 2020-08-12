@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Favourite Films</title>
+    <link rel="stylesheet" href="styles/styles.css" />
+    <script src="scripts/app.js" defer></script>
+  </head>
+  
+  <body>
+    <div id="backdrop"></div>
+    <div class="modal" id="add-modal">
+      <div class="modal__content">
+        <label for="title">Film Title</label>
+        <input type="text" name="title" id="title" autofocus />
+        <label for="image-url">Image URL</label>
+        <input type="text" name="image-url" id="image-url" />
+        <label for="rating">Your Rating</label>
+        <input
+          type="number"
+          step="1"
+          max="5"
+          min="1"
+          name="rating"
+          id="rating"
+        />
+      </div>
+      <div class="modal__actions">
+        <button class="btn btn--passive">Cancel</button>
+        <button class="btn btn--success">Add</button>
+      </div>
+    </div>
+    <div class="modal" id="delete-modal">
+      <h2 class="modal__title">Are you sure?</h2>
+      <p class="modal__content">
+        Are you sure you want to delete this film? This can't be undone
+      </p>
+      <div class="modal__actions">
+        <button class="btn btn--passive">No (Cancel)</button>
+        <button class="btn btn--danger">Yes</button>
+      </div>
+    </div>
+
+    <header>
+      <h1>Favourite Films</h1>
+      <button>ADD FILM</button>
+    </header>
+
+    <main>
+      <section class="entry-card">
+        <p>Your personal film database</p>
+        <p class="entry-card--small">Click the button above to get started</p>
+      </section>
+      <ul id="film-list"></ul>
+    </main>
+  </body>
+</html>
